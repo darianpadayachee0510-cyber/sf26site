@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>SF-26 | Design</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    .hero {
+      height: 80vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+
+      background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+      url("sf26.png");
+
+      background-size: cover;
+      background-position: center;
+    }
+
+    .hero h1 {
+      font-size: 60px;
+      color: red;
+      margin: 0;
+    }
+
+    .section {
+	overflow: hidden;
+  padding: 60px 20px;
+  max-width: 1500px;
+  margin: auto;
+  background: black;
+  color: black;
+}
+
+    .section p {
+  color: white;
+}
+
+.section h2 {
+  color: red; /* keep Ferrari accent */
+}
+
+    .split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+  margin-top: 20px;
+}
+
+    .split img {
+  width: 100%;
+  height: 520px;
+  object-fit: cover;
+  border-radius: 14px;
+}
+
+    .footer {
+      text-align: center;
+      padding: 20px;
+      background: black;
+      color: #666;
+      font-size: 12px;
+    }
+	
+    .sidepanel {
+      position: fixed;
+      right: 20px;
+      top: 120px;
+      width: 175px;
+      background: #111;
+      padding: 15px;
+      border-left: 2px solid red;
+      color: white;
+      font-size: 14px;
+    }
+
+    .sidepanel h3 {
+      color: red;
+      margin-top: 0;
+    }
+
+    .sidepanel p {
+      margin: 8px 0;
+      color: #ccc;
+    }
+	
+	.section:hover {
+  transform: translateY(-3px);
+  transition: 0.3s ease;
+}
+
+
+
+    @media (max-width: 800px) {
+      .split {
+        grid-template-columns: 1fr;
+      }
+	  .sidepanel {
+        display: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAV -->
+  <div class="nav">
+  <img src="ferrari-logo-2.jpg" class="nav-logo" alt="Ferrari">
+
+
+  <div class="nav-center">SCUDERIA FERRARI</div>
+
+  <div class="nav-links">
+    <a href="index.html">Overview</a>
+    <a href="tech.html">Tech</a>
+    <a href="drivers.html">Drivers</a>
+    <a href="season.html">Season</a>
+
+  </div>
+</div>
+
+  <!-- HERO -->
+  <div class="hero">
+    <h1>SF-26 DESIGN</h1>
+  </div>
+  
+  <!-- SIDE PANEL -->
+  <div class="sidepanel right">
+  <h3>PERFORMANCE DATA</h3>
+
+<h4>Speed</h4>
+<p>🏎 Top Speed: 355 km/h</p>
+<p>⚡ 0–100 km/h: ~2.3s (est.)</p>
+<p>🚀 Acceleration: Hybrid Boost Enhanced</p>
+
+<h4>Power Unit</h4>
+<p>🔋 Hybrid Engine: V6 Turbo + ERS</p>
+<p>⚡ Output: 1050+ HP</p>
+<p>🔄 Energy Recovery: Regenerative System</p>
+
+<h4>Aerodynamics</h4>
+<p>🌬 Downforce: High Efficiency Setup</p>
+<p>🪶 Drag Reduction: Advanced Wing Flex</p>
+<p>📉 Airflow: Clean Rear Extraction</p>
+
+<h4>Race Performance</h4>
+<p>⛽ Fuel Efficiency: +18%</p>
+<p>🔧 Tyre Management: Improved</p>
+<p>🏁 Race Pace: Competitive Top Tier</p>
+</div>
+  
+  <div class="sidepanel left">
+  <h3>FERRARI SF-26</h3>
+
+<h4>Car Identity</h4>
+<p>🏁 Official Name: SF-26</p>
+<p>🏎 Category: Formula 1 (2026 Regs)</p>
+<p>🟥 Team: Scuderia Ferrari</p>
+
+<h4>Development</h4>
+<p>🏭 Built in: Maranello</p>
+<p>🧑‍🔧 Concept: 2026 Hybrid Era Car</p>
+<p>📅 Development Cycle: Multi-season evolution</p>
+
+<h4>Chassis</h4>
+<p>🧱 Carbon Fibre Monocoque</p>
+<p>⚖️ Weight Distribution: Optimised</p>
+<p>🛡 Safety: FIA 2026 Standard+</p>
+
+<h4>Design Focus</h4>
+<p>🌬 Low Drag Philosophy</p>
+<p>🧠 High Efficiency Aero Map</p>
+<p>⚡ Energy Recovery Priority</p>
+</div>
+
+  <!-- INTRO -->
+  <div class="section split">
+    <h2>A New Era of Ferrari Engineering</h2>
+    <p>
+      The SF-26 is Ferrari’s response to the 2026 Formula 1 regulation overhaul — a machine built around
+      efficiency, aerodynamics, and energy recovery. Every surface is designed to control airflow and extract
+      maximum performance from a new generation of hybrid power.
+    </p>
+  </div>
+
+  <!-- AERO -->
+  <div class="section split">
+    <div>
+      <h2>Aerodynamic Philosophy</h2>
+      <p>
+        Ferrari has focused on a low-drag, high-efficiency concept. The SF-26 features refined sidepod
+        inlets, aggressive floor shaping, and a cleaner rear end to maximize airflow toward the diffuser.
+      </p>
+    </div>
+    <img src="aero.jpg" alt="SF-26 Aerodynamics">
+  </div>
+
+  <!-- MACARENA WING -->
+  <div class="section split">
+    <img src="wing.png" alt="Macarena Wing">
+
+    <div>
+      <h2>The “Macarena” Wing</h2>
+      <p>
+        One of the most talked-about innovations is Ferrari’s flexible rear wing concept, often referred to
+        as the “Macarena wing.” Designed to subtly adjust under load, it reduces drag on straights while
+        maintaining downforce in corners — giving Ferrari a crucial edge in top speed without sacrificing grip.
+      </p>
+    </div>
+  </div>
+
+  <!-- POWER UNIT -->
+  <div class="section split">
+    <div>
+      <h2>Hybrid Power Unit</h2>
+      <p>
+        The 2026 regulations place greater emphasis on electrical power. Ferrari’s new hybrid system delivers
+        increased energy deployment, improved battery efficiency, and better energy recovery under braking.
+      </p>
+    </div>
+    <img src="engine.jpg" alt="Ferrari Power Unit">
+  </div>
+
+  <!-- CHASSIS -->
+  <div class="section split">
+
+  <img src="weight.jpg" alt="SF-26 Chassis">
+
+  <div>
+    <h2>Chassis & Weight Design</h2>
+    <p>
+      The SF-26 chassis is built using ultra-light carbon fibre construction to maximize strength while reducing overall weight.
+      Engineers have focused on improving rigidity, crash safety, and weight distribution to enhance cornering performance.
+    </p>
+
+    <p>
+      Every gram matters in modern Formula 1 — the SF-26 is designed to stay as close to the minimum weight limit as possible
+      while maintaining structural integrity under extreme loads.
+    </p>
+  </div>
+
+</div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    © 2026 SF-26 Concept Page | Technical Overview
+  </div>
+
+</body>
+</html>

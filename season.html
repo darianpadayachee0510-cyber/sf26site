@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>SF-26 | Season</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    body {
+      background: black;
+      color: black;
+    }
+
+    .header {
+      text-align: center;
+      padding: 80px 20px 20px;
+    }
+
+    .header h1 {
+      color: white;
+      font-size: 55px;
+      margin: 0;
+    }
+
+    .bar {
+      height: 4px;
+      width: 120px;
+      background: white;
+      margin: 10px auto 30px;
+      border-radius: 2px;
+    }
+
+    .season-title {
+      text-align: center;
+      color: white;
+      font-size: 35px;
+      margin: 50px 0 20px;
+      letter-spacing: 2px;
+    }
+
+    .race-map {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      padding: 30px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .race-card {
+      background: #111;
+      border-radius: 12px;
+      padding: 15px;
+      color: white;
+      border: 1px solid #222;
+      transition: 0.2s ease;
+      overflow: hidden;
+    }
+
+    .race-card:hover {
+      transform: translateY(-5px);
+      border-color: red;
+    }
+
+    .race-card h3 {
+      color: red;
+      margin: 10px 0;
+    }
+
+    .race-card p {
+      margin: 5px 0;
+      color: #ccc;
+    }
+
+    /* TRACK IMAGE */
+    .track-img {
+      width: 100%;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 10px;
+      border: 1px solid #222;
+      filter: brightness(0.85);
+    }
+
+    /* HIGHLIGHTS */
+    .win {
+      border-left: 4px solid gold;
+      box-shadow: 0 0 15px rgba(255, 215, 0, 0.15);
+    }
+
+    .podium {
+      border-left: 4px solid #ff2b2b;
+    }
+
+    .footer {
+      text-align: center;
+      padding: 20px;
+      background: black;
+      color: #666;
+      font-size: 12px;
+      margin-top: 60px;
+    }
+  </style>
+</head>
+
+<script>
+function openModal(title, img, info) {
+  document.getElementById("raceModal").style.display = "flex";
+  document.getElementById("modalTitle").innerText = title;
+  document.getElementById("modalImg").src = img;
+  document.getElementById("modalText").innerText = info;
+}
+
+function closeModal() {
+  document.getElementById("raceModal").style.display = "none";
+}
+
+window.onclick = function(event) {
+  let modal = document.getElementById("raceModal");
+  if (event.target === modal) {
+    closeModal();
+  }
+}
+</script>
+
+<body>
+
+  <!-- NAV -->
+  <div class="nav">
+  <img src="ferrari-logo-2.jpg" class="nav-logo" alt="Ferrari">
+ 
+
+  <div class="nav-center">SCUDERIA FERRARI</div>
+
+  <div class="nav-links">
+    <a href="index.html">Overview</a>
+    <a href="tech.html">Tech</a>
+    <a href="drivers.html">Drivers</a>
+    <a href="season.html">Season</a>
+	
+  </div>
+</div>
+
+  <!-- HEADER -->
+  <div class="header">
+  <div class="title-row">
+    <img src="logo.jpg" class="title-logo left" alt="Ferrari">
+
+    <div class="title-center">
+      <h1>SEASON RESULTS</h1>
+      <div class="bar"></div>
+    </div>
+
+    <img src="logo.jpg" class="title-logo right" alt="Ferrari">
+  </div>
+</div>
+
+  <!-- 2026 -->
+  <div class="season-title">2026 Season</div>
+
+  <div class="race-map">
+  
+    <div class="race-card win"
+onclick="openModal(
+'Australia GP',
+'tracks/australia.jpg',
+'Ferrari started the 2026 season with mixed emotions. The car showed strong early pace in race conditions, especially in the opening laps where Charles Leclerc briefly fought near the front. However, energy management issues and race strategy inconsistency meant they couldn’t fully convert performance into a top result. Lewis Hamilton spent most of the race adapting to the new regulation-style driving demands, focusing on consistency over aggression..'
+)">
+  <img src="tracks/australia.jpg" class="track-img">
+  <h3>Australia</h3>
+  <p>Leclerc: 2nd 🏆</p>
+  <p>Hamilton: 4th</p>
+</div>
+
+    <div class="race-card win"
+onclick="openModal(
+'China GP',
+'tracks/china.jpg',
+'Ferrari looked more competitive here. The SF-26 package worked better in qualifying trim, allowing both cars to start higher up the grid. In the race, Leclerc delivered a clean, controlled drive to secure a strong points finish, while Hamilton backed him up with a stable run in the top midfield fight. Ferrari were clearly closer to the front-running pack but still lacking that final race-winning edge..'
+)">
+  <img src="tracks/china.jpg" class="track-img">
+  <h3>China</h3>
+  <p>Leclerc: 1st </p>
+  <p>Hamilton: 3rd</p>
+</div>
+   
+
+    <div class="race-card win"
+onclick="openModal(
+'Japan GP',
+'tracks/japan.jpg',
+'This was Ferrari’s first real standout moment of the season. At Suzuka, Leclerc put in a sharp drive to finish P3, bringing Ferrari their first podium of 2026. Hamilton also scored solid points in a tightly fought midfield battle. The race highlighted Ferrari’s improved race pace and better tyre management compared to the opening rounds, even if Mercedes still controlled the win.'
+)">
+  <img src="tracks/japan.jpg" class="track-img">
+  <h3>Japan</h3>
+  <p>Leclerc: 1st </p>
+  <p>Hamilton: 3rd</p>
+</div>
+
+  </div>
+
+  <!-- 2025 -->
+  <div class="season-title">2025 Season</div>
+
+  <div class="race-map">
+  
+    <div class="race-card win"
+onclick="openModal(
+'Australia GP',
+'tracks/australia.jpg',
+'Ferrari started the season solidly with points from both drivers. Charles Leclerc led the team effort while Lewis Hamilton adapted to his new Ferrari environment, but the pace gap to McLaren and Red Bull was already clear'
+)">
+  <img src="tracks/australia.jpg" class="track-img">
+  <h3>Australia</h3>
+  <p>Leclerc: 1st 🏆</p>
+  <p>Hamilton: 6th</p>
+</div>  
+
+    <div class="race-card win"
+onclick="openModal(
+'China GP',
+'tracks/china.jpg',
+'A tough weekend. Ferrari struggled with setup and tire performance, leaving them outside the podium fight and fighting mostly in the midfield points.'
+)">
+  <img src="tracks/china.jpg" class="track-img">
+  <h3>China</h3>
+  <p>Leclerc: 5th </p>
+  <p>Hamilton: 7th</p>
+</div>
+
+    <div class="race-card win"
+onclick="openModal(
+'Japan GP',
+'tracks/japan.jpg',
+'A more stable performance. Leclerc brought in valuable points with a clean race, while Hamilton continued learning the car’s handling characteristics.'
+)">
+  <img src="tracks/japan.jpg" class="track-img">
+  <h3>Japan</h3>
+  <p>Leclerc: 3rd </p>
+  <p>Hamilton: 4th</p>
+</div>
+
+    <div class="race-card win"
+onclick="openModal(
+'Bahrain GP',
+'tracks/bahrain.jpg',
+'One of Ferrari’s better early rounds. Both cars were competitive in the top 6–7 range, showing improved race pace and tyre management.'
+)">
+  <img src="tracks/bahrain.jpg" class="track-img">
+  <h3>Bahrain</h3>
+  <p>Leclerc: 2nd </p>
+  <p>Hamilton: 5th</p>
+</div>
+
+    <div class="race-card win"
+onclick="openModal(
+'Saudi Arabia GP',
+'tracks/saudi.jpg',
+'Strong qualifying performance translated into solid points, but Ferrari still lacked the outright pace to challenge McLaren or Red Bull in race conditions.'
+)">
+  <img src="tracks/saudi.jpg" class="track-img">
+  <h3>Saudi Arabia</h3>
+  <p>Leclerc: 4th </p>
+  <p>Hamilton: 3rd</p>
+</div>
+   
+
+    <div class="race-card win"
+onclick="openModal(
+'Miami GP',
+'tracks/miami.jpg',
+'Midfield fight weekend. Strategy execution was mixed, and Ferrari couldn’t convert qualifying positions into podium contention.'
+)">
+  <img src="tracks/miami.jpg" class="track-img">
+  <h3>Miami</h3>
+  <p>Leclerc: 4th </p>
+  <p>Hamilton: 6th</p>
+</div>
+
+    <div class="race-card win"
+onclick="openModal(
+'Imola GP',
+'tracks/imola.jpg',
+'A better showing in front of home fans. Hamilton scored a strong P4 finish, giving Ferrari one of their more competitive weekends of the season.'
+)">
+  <img src="tracks/imola.jpg" class="track-img">
+  <h3>Imola</h3>
+  <p>Leclerc: 2nd </p>
+  <p>Hamilton: 5th</p>
+</div>
+
+    <div class="race-card win"
+onclick="openModal(
+'Monaco GP',
+'tracks/monaco.jpg',
+'Arguably Ferrari’s most emotional highlight. Charles Leclerc delivered one of their best results of the year with a P2 finish at his home race, narrowly missing victory.'
+)">
+  <img src="tracks/monaco.jpg" class="track-img">
+  <h3>Monaco</h3>
+  <p>Leclerc: 1st 🏆</p>
+  <p>Hamilton: 4th</p>
+</div>
+
+    <div class="race-card win"
+onclick="openModal(
+'Canada GP',
+'tracks/canada.jpg',
+'A chaotic race where Ferrari benefited from reliability and incidents ahead, securing valuable points rather than pure pace.'
+)">
+  <img src="tracks/canada.jpg" class="track-img">
+  <h3>Canada</h3>
+  <p>Leclerc: 3rd </p>
+  <p>Hamilton: 6th</p>
+</div>
+
+    <div class="race-card win"
+onclick="openModal(
+'Spain GP',
+'tracks/spain.jpg',
+'Consistent but not threatening the front. Ferrari stayed in the points, but tyre degradation limited their race pace.'
+)">
+  <img src="tracks/spain.jpg" class="track-img">
+  <h3>Spain</h3>
+  <p>Leclerc: 4th </p>
+  <p>Hamilton: 5th</p>
+</div>
+
+    <div class="race-card win"
+onclick="openModal(
+'Austria GP',
+'tracks/austria.jpg',
+'Improved qualifying showed potential, but race pace still left them behind the top two teams.'
+)">
+  <img src="tracks/austria.jpg" class="track-img">
+  <h3>Austria</h3>
+  <p>Leclerc: 3rd </p>
+  <p>Hamilton: 7th</p>
+</div>
+
+    <div class="race-card win"
+onclick="openModal(
+'Britain GP',
+'tracks/britain.jpg',
+'Mixed conditions exposed Ferrari’s weakness in changing grip levels. Strategy calls didn’t help their final positions.'
+)">
+  <img src="tracks/britain.jpg" class="track-img">
+  <h3>Britain</h3>
+  <p>Leclerc: 5th</p>
+  <p>Hamilton: 6th</p>
+</div>
+
+    <div class="race-card win"
+onclick="openModal(
+'Hungary GP',
+'tracks/hungary.jpg',
+'Solid double points finish, but again no podium challenge. Ferrari were clearly stuck as “best of the rest” contenders.'
+)">
+  <img src="tracks/hungary.jpg" class="track-img">
+  <h3>Hungary</h3>
+  <p>Leclerc: 2nd </p>
+  <p>Hamilton: 4th</p>
+</div>
+
+    <div class="race-card win"
+onclick="openModal(
+'Belgium GP',
+'tracks/belgium.jpg',
+'High-speed circuits highlighted Ferrari’s aerodynamic inconsistency. Leclerc salvaged points, Hamilton struggled more.'
+)">
+  <img src="tracks/belgium.jpg" class="track-img">
+  <h3>Belgium</h3>
+  <p>Leclerc: 3rd </p>
+  <p>Hamilton: 5th</p>
+</div>
+
+    <div class="race-card win"
+onclick="openModal(
+'Netherlands GP',
+'tracks/netherlands.jpg',
+'A clean but uneventful race — Ferrari finished in points-paying positions but without impact at the front.'
+)">
+  <img src="tracks/netherlands.jpg" class="track-img">
+  <h3>Netherlands</h3>
+  <p>Leclerc: 4th </p>
+  <p>Hamilton: 6th</p>
+</div>
+
+    <div class="race-card win"
+onclick="openModal(
+'Italy GP',
+'tracks/italy.jpg',
+'Strong home race performance. Leclerc finished P4 and Hamilton P6 after a competitive but ultimately podium-less weekend.'
+)">
+  <img src="tracks/italy.jpg" class="track-img">
+  <h3>Italy</h3>
+  <p>Leclerc: 2nd </p>
+  <p>Hamilton: 3rd</p>
+</div>
+
+    <div class="race-card win"
+onclick="openModal(
+'Singapore GP',
+'tracks/singapore.jpg',
+'Ferrari showed decent street circuit pace but couldn’t match McLaren’s control of the race.'
+)">
+  <img src="tracks/singapore.jpg" class="track-img">
+  <h3>Singapore</h3>
+  <p>Leclerc: 3rd </p>
+  <p>Hamilton: 5th</p>
+</div>
+
+    <div class="race-card win"
+onclick="openModal(
+'USA GP',
+'tracks/usa.jpg',
+'Competitive sprint weekend. Ferrari picked up solid points but still lacked race-winning pace.'
+)">
+  <img src="tracks/usa.jpg" class="track-img">
+  <h3>USA</h3>
+  <p>Leclerc: 4th</p>
+  <p>Hamilton: 6th</p>
+</div>
+
+    <div class="race-card win"
+onclick="openModal(
+'Mexico GP',
+'tracks/mexico.jpg',
+'One of Leclerc’s stronger drives of the season, finishing near the front but still short of victory contention.'
+)">
+  <img src="tracks/mexico.jpg" class="track-img">
+  <h3>Mexico</h3>
+  <p>Leclerc: 3rd</p>
+  <p>Hamilton: 7th</p>
+</div>
+
+    <div class="race-card win"
+onclick="openModal(
+'Brazil GP',
+'tracks/brazil.jpg',
+'Ferrari struggled in mixed conditions and couldn’t maximise strategy opportunities.'
+)">
+  <img src="tracks/brazil.jpg" class="track-img">
+  <h3>Brazil</h3>
+  <p>Leclerc: 2nd </p>
+  <p>Hamilton: 5th</p>
+</div>
+
+    <div class="race-card win"
+onclick="openModal(
+'Las Vegas GP',
+'tracks/vegas.jpg',
+'A difficult weekend marked by low grip and setup issues. Ferrari dropped points relative to rivals.'
+)">
+  <img src="tracks/vegas.jpg" class="track-img">
+  <h3>Las Vegas</h3>
+  <p>Leclerc: 4th</p>
+  <p>Hamilton: 6th</p>
+</div>
+
+    <div class="race-card win"
+onclick="openModal(
+'Qatar GP',
+'tracks/qatar.jpg',
+'Late-season race where Ferrari focused more on damage control than performance gains.'
+)">
+  <img src="tracks/qatar.jpg" class="track-img">
+  <h3>Qatar</h3>
+  <p>Leclerc: 3rd </p>
+  <p>Hamilton: 5th</p>
+</div>
+
+    <div class="race-card win"
+onclick="openModal(
+'Abu Dhabi GP',
+'tracks/abu_dhabi.jpg',
+'Season finale. Clean but uneventful race for Ferrari, sealing their position in the Constructors’ standings without a win all year.'
+)">
+  <img src="tracks/abu_dhabi.jpg" class="track-img">
+  <h3>Abu Dhabi</h3>
+  <p>Leclerc: 2nd </p>
+  <p>Hamilton: 4th</p>
+</div>
+
+<div class="sidepanel left">
+  <h3>STANDINGS</h3>
+
+  <h4>Drivers</h4>
+  <p>Leclerc: 182 pts</p>
+  <p>Hamilton: 141 pts</p>
+
+  <h4>Constructors</h4>
+  <p>Ferrari: 323 pts</p>
+  <p>Position: 2nd</p>
+</div>
+
+<div class="sidepanel right">
+  <h3>SEASON STATS</h3>
+
+  <p>🏆 Wins: 4</p>
+  <p>🥈 Podiums: 12</p>
+  <p>⚡ Pole Positions: 5</p>
+  <p>🔧 Fastest Laps: 3</p>
+
+  <h4>Consistency</h4>
+  <p>Points Finishes: 18/23</p>
+</div>
+	
+	<div id="raceModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal()">&times;</span>
+
+    <h2 id="modalTitle">Race</h2>
+    <img id="modalImg" class="modal-img">
+
+    <p id="modalText"></p>
+  </div>
+</div>
+
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    © 2026 SF-26 Concept Page | Ferrari Season Data
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>SF-26 | Drivers</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    .header {
+      text-align: center;
+      padding: 80px 20px 40px;
+    }
+
+    .header h1 {
+      color: red;
+      font-size: 60px;
+      margin: 0;
+    }
+
+    .header p {
+      color: #aaa;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 40px;
+      padding: 50px;
+      background: #111;
+    }
+
+    .card {
+      background: #0f0f0f;
+      border: 1px solid #222;
+      border-radius: 12px;
+      overflow: hidden;
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      border-color: red;
+    }
+
+    .card img {
+  width: 100%;
+  height: 750px;       
+  object-fit: cover;
+}
+
+    .card-content {
+      padding: 20px;
+    }
+
+    .card h2 {
+      color: red;
+      margin: 0 0 10px;
+    }
+
+    .info {
+      color: #bbb;
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    .stat {
+      margin-top: 10px;
+      font-size: 13px;
+      color: #888;
+    }
+
+    .footer {
+      text-align: center;
+      padding: 20px;
+      background: black;
+      color: #666;
+      font-size: 12px;
+    }
+	
+	.title-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+.title-logo {
+  height: 100px;
+}
+  </style>
+</head>
+
+<body>
+
+  <!-- NAV -->
+  <div class="nav">
+  <img src="ferrari-logo-2.jpg" class="nav-logo" alt="Ferrari">
+
+
+  <div class="nav-center">SCUDERIA FERRARI</div>
+
+  <div class="nav-links">
+    <a href="index.html">Overview</a>
+    <a href="tech.html">Tech</a>
+    <a href="drivers.html">Drivers</a>
+    <a href="season.html">Season</a>
+
+  </div>
+</div>
+
+  <!-- HEADER -->
+  <div class="header">
+  <div class="title-row">
+    
+    <h1>DRIVERS</h1>
+	
+  </div>
+  <p>Ferrari’s 2026 lineup pushing for championship glory.</p>
+</div>
+
+  <!-- DRIVER GRID -->
+  <div class="grid">
+
+    <!-- LECLERC -->
+    <div class="card">
+      <img src="leclerc.jpg" alt="Charles Leclerc">
+
+      <div class="card-content">
+        <h2>Charles Leclerc</h2>
+
+        <div class="info">
+          Monaco-born driver known for raw speed and qualifying dominance. A key part of Ferrari’s future and championship ambitions.
+        </div>
+
+        <div class="stat">Number: 16</div>
+        <div class="stat">Nationality: Monaco</div>
+        <div class="stat">Podiums: 30+</div>
+        <div class="stat">Wins: 5+</div>
+      </div>
+    </div>
+
+    <!-- TEAMMATE -->
+    <div class="card">
+      <img src="teammate.jpeg" alt="Ferrari Driver">
+
+      <div class="card-content">
+        <h2>Lewis Hamilton</h2>
+
+        <div class="info">
+          Ferrari’s second driver bringing consistency, racecraft, and strong points finishes to support the championship fight.
+        </div>
+
+        <div class="stat">Number: 44</div>
+        <div class="stat">Nationality: British</div>
+        <div class="stat">Podiums: --</div>
+        <div class="stat">Wins: --</div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    © 2026 Ferrari Concept Page | Drivers
+  </div>
+
+</body>
+</html>
